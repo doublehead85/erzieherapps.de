@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>erzieherapps.de</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    
+    <style>
+        .header
+        {
+            background-color: #DAE4E5;
+            text-align: center;
+            margin-left: 100px;
+            margin-right: 100px;
+            margin-top: 30px;
+            border-radius: 10px;   
+            font-family: 'Fredoka One', cursive;
+        }
+        
+        .header img 
+        {
+            float: left;
+            zoom: 24%;
+        }   
+
+        .header h1 
+        {
+            position: relative;
+            margin: auto; 
+        }
+
+        .links 
+        {
+            float: right; 
+            text-decoration: none;
+            padding: 10px;
+            font-family: 'Fredoka One', cursive;           
+        }
+
+        .content
+        {
+            background-color: #DAE4E5;
+            margin-left: 100px;
+            margin-right: 100px;
+            margin-top: 50px;
+            border-radius: 10px; 
+            font-family: 'Fredoka One', cursive;  
+            padding-left: 10px;  
+        }
+
+        .anwendungslinks
+        {
+            text-decoration: none; 
+            margin-top: 30px;
+            margin-bottom: 30px;   
+        }
+
+        .footer
+        {
+            background-color: #DAE4E5;
+            text-align: center;
+            margin-left: 100px;
+            margin-right: 100px;
+            margin-top: 30px; 
+            border-radius: 10px;
+            font-family: 'Fredoka One', cursive;
+
+        }
+
+    #akkordeon:not(:target) .inhalt,
+    
+    #akkordeon:not(:target) .hide,
+    
+    #akkordeon:target .show 
+    {
+        display: none; 
+    }
+    
+    #akkordeon:target .inhalt 
+    {
+        display: block;
+    }
+
+    #akkordeon2:not(:target) .inhalt,
+    
+    #akkordeon2:not(:target) .hide,
+    
+    #akkordeon2:target .show 
+    {
+        display: none; 
+    }
+    
+    #akkordeon2:target .inhalt 
+    {
+        display: block;
+    }
+
+    #akkordeon3:not(:target) .inhalt,
+    
+    #akkordeon3:not(:target) .hide,
+    
+    #akkordeon3:target .show 
+    {
+        display: none; 
+    }
+    
+    #akkordeon3:target .inhalt 
+    {
+        display: block;
+    }
+
+    #akkordeon4:not(:target) .inhalt,
+    
+    #akkordeon4:not(:target) .hide,
+    
+    #akkordeon4:target .show 
+    {
+        display: none; 
+    }
+    
+    #akkordeon4:target .inhalt 
+    {
+        display: block;
+    }    
+
+    #akkordeon5:not(:target) .inhalt,
+    
+    #akkordeon5:not(:target) .hide,
+    
+    #akkordeon5:target .show 
+    {
+        display: none; 
+    }
+    
+    #akkordeon5:target .inhalt 
+    {
+        display: block;
+    }
+
+
+
+    #akkordeon6:not(:target) .inhalt,
+    
+    #akkordeon6:not(:target) .hide,
+    
+    #akkordeon6:target .show 
+    {
+        display: none; 
+    }
+    
+    #akkordeon6:target .inhalt 
+    {
+        display: block;
+    }
+
+    #akkordeon7:not(:target) .inhalt,
+    
+    #akkordeon7:not(:target) .hide,
+    
+    #akkordeon7:target .show 
+    {
+        display: none; 
+    }
+    
+    #akkordeon7:target .inhalt 
+    {
+        display: block;
+    }
+
+
+
+    #akkordeon8:not(:target) .inhalt,
+    
+    #akkordeon8:not(:target) .hide,
+    
+    #akkordeon8:target .show 
+    {
+        display: none; 
+    }
+    #akkordeon8:target .inhalt 
+    {
+        display: block;
+    }
+
+    #akkordeon9:not(:target) .inhalt,
+    
+    #akkordeon9:not(:target) .hide,
+    
+    #akkordeon9:target .show 
+    {
+        display: none; 
+    }
+    
+    #akkordeon9:target .inhalt 
+    {
+        display: block;
+    }
+
+    #akkordeon10:not(:target) .inhalt,
+    
+    #akkordeon10:not(:target) .hide,
+    
+    #akkordeon10:target .show 
+    {
+        display: none; 
+    }
+    
+    #akkordeon10:target .inhalt 
+    {
+        display: block;
+    }
+
+    #akkordeon11:not(:target) .inhalt,
+    
+    #akkordeon11:not(:target) .hide,
+    
+    #akkordeon11:target .show 
+    {
+        display: none; 
+    }
+    
+    #akkordeon11:target .inhalt 
+    {
+        display: block;
+    }
+
+    #akkordeon12:not(:target) .inhalt,
+    
+    #akkordeon12:not(:target) .hide,
+    
+    #akkordeon12:target .show 
+    {
+        display: none; 
+    }
+    
+    #akkordeon12:target .inhalt 
+    {
+        display: block;
+    }
+
+    
+    #akkordeon13:not(:target) .inhalt,
+    
+    #akkordeon13:not(:target) .hide,
+    
+    #akkordeon13:target .show 
+    {
+        display: none; 
+    }
+    
+    #akkordeon13:target .inhalt 
+    {
+        display: block;
+    }
+
+    #akkordeon14:not(:target) .inhalt,
+    
+    #akkordeon14:not(:target) .hide,
+    
+    #akkordeon14:target .show 
+    {
+        display: none; 
+    }
+    
+    #akkordeon14:target .inhalt 
+    {
+        display: block;
+    }
+
+    #akkordeon15:not(:target) .inhalt,
+    
+    #akkordeon15:not(:target) .hide,
+    
+    #akkordeon15:target .show 
+    {
+        display: none; 
+    }
+    
+    #akkordeon15:target .inhalt 
+    {
+        display: block;
+    }
+
+
+    .inhalt 
+    {
+          
+    }
+
+    .show,
+    .hide 
+    {
+        text-decoration: none;
+        color:rgb(112, 16, 16);
+    }
+
+    .show:hover,
+    .hide:hover     
+    {
+        transition:0.2s all ease-in-out!important;
+        text-decoration: none;
+    }
+
+
+    </style>    
+</head>
+
+<body>
+    <div class = "header">
+
+        <div>
+            <img src="frontend/img/logo.png"/>
+        </div>   
+        
+        <h1>erzieherapps.de</h1>    
+        <h3>digitale Lernanwendungen für die Ausbildung von pädagogischen Fachkräften</h3>
+
+             <!--Link Kontakt-->  
+             <a class = "links" href="impressum.html">Impressum</a>
+
+             <!--Link Programmierübungen-->  
+             <a class = "links" href="übungen.html">Programmierübungen</a>
+
+             <!--Link Erklärvideos-->  
+             <a class = "links" href="videos.html">Erklärvideos</a>
+
+             <!--Link Anwendungen-->  
+             <a class = "links" href="anwendungen.html">Apps</a>
+
+             <!--Link Startseite-->    
+             <a class = "links" href="index.html">Startseite</a>
+
+
+    </div>
+
+    <div class = "content">
+        <h2>Apps</h2>
+
+        <p></p>
+        <a class = "anwendungslinks" href="https://learningapps.org/display?v=p1x0dugaa22" target="_blank">Vorlage interaktive Beobachtungsvideos</a>
+        <p></p>
+        ein Beispiel, wie Youtube-Videos interaktiv gestaltet werden können
+        <p></p>
+            <div id="akkordeon15">
+                <a class="show" href="#akkordeon15">didaktischer Einsatz, Grenzen, Technologie</a><a class="hide" href="#">Weniger Infos</a>
+                    <div class="inhalt">
+                    didaktische Einsatz: Projektarbeit; Beobachtungen praktisch - LF4/LF2 Sozialassistent*innen
+                    <p></p>
+                    Grenzen: schriftsprachlicher Ausdruck wird wenig gefördert 
+                    <p></p>
+                    eingesetze Technologien: learningapps.org
+            </div>
+    </div>
+
+<hr>
+
+
+
+
+
+        <p></p>
+        <a class = "anwendungslinks" href="https://learningapps.org/20562089" target="_blank">Quiz zur Identitätsentwicklung nach Marcia</a>
+        <p></p>
+        Learningapp bei der Beispielsituationen einem Identitätsstatus nach James Marcia zugeordnet werden müssen
+        <p></p>
+            <div id="akkordeon14">
+                <a class="show" href="#akkordeon14">didaktischer Einsatz, Grenzen, Technologie</a><a class="hide" href="#">Weniger Infos</a>
+                    <div class="inhalt">
+                    didaktische Einsatz: Übung zur Identitätsentwicklung - LF4 
+                    <p></p>
+                    Grenzen: ersetzt keine Bearbeitung einer Fallsituation zum Thema
+                    <p></p>
+                    eingesetze Technologien: learningapps.org
+            </div>
+    </div>
+
+<hr>
+
+        <p></p>
+        <a class = "anwendungslinks" href="https://learningapps.org/display?v=p94k0mz2a21" target="_blank">Beobachtungsfehler Quiz</a>
+        <p></p>
+        Learningapp bei der Beispielsituationen Beobachtungsfehlern zugeordnet werden müssen 
+        <p></p>
+            <div id="akkordeon13">
+                <a class="show" href="#akkordeon13">didaktischer Einsatz, Grenzen, Technologie</a><a class="hide" href="#">Weniger Infos</a>
+                    <div class="inhalt">
+                    didaktische Einsatz: Übung Beobachtungsfehler - LF4
+                    <p></p>
+                    Grenzen: ersetzt keine Bearbeitung einer Fallsituation zum Thema
+                    <p></p>
+                    eingesetze Technologien: learningapps.org
+            </div>
+    </div>
+
+<hr>
+
+
+
+        <p></p>
+        <a class = "anwendungslinks" href="https://prismatic-halva-d42581.netlify.app/" target="_blank">Operatorentraining 2022</a>
+        <p></p>
+        Karteikarten zum Auswendig lernen der Schrittfolge von Operatoren, andere Lernmodi möglich
+        <p></p>
+        <div id="akkordeon12">
+            <a class="show" href="#akkordeon12">didaktischer Einsatz, Grenzen, Technologie</a><a class="hide" href="#">Weniger Infos</a>
+                <div class="inhalt">
+                didaktische Einsatz: Prüfungsvorbereitung
+                <p></p>
+                Grenzen: nur sinnvoll, wenn der Sinn der Operatoren verstanden wurde
+                <p></p>
+                eingesetze Technologien: Quizlet-Editor
+            </div>
+        </div>
+
+<hr>
+
+        <p></p>
+            <a class = "anwendungslinks" href="https://ubiquitous-gelato-e07c0c.netlify.app/" target="_blank">humanistisches Menschenbild im Kitaalltag</a>
+        <p></p>
+        Eine Erklärpräsentation über das humanistische Menschenbild im Kitaalltag mit Textaufgaben
+        <p></p>
+        <div id="akkordeon11">
+            <a class="show" href="#akkordeon11">didaktischer Einsatz, Grenzen, Technologie</a><a class="hide" href="#">Weniger Infos</a>
+                <div class="inhalt">
+                    didaktische Einsatz: Erarbeitung Thema Menschenbilder
+                    <p></p>
+                    Grenzen:-
+                    <p></p>
+                    eingesetze Technologien: lumi-Editor; h5p
+                </div>
+        </div>
+
+<hr>
+
+            <p></p>
+            <a class = "anwendungslinks" href="https://starlit-paletas-b24f91.netlify.app/" target="_blank">Kita Regenbogen VR</a>
+            <p></p>
+            Ein virtueller Rundgang durch die imaginäre Kita Regenbogen
+            <p></p>
+            <div id="akkordeon10">
+                <a class="show" href="#akkordeon10">didaktischer Einsatz, Grenzen, Technologie</a><a class="hide" href="#">Weniger Infos</a>
+                    <div class="inhalt">
+                        didaktische Einsatz: Themen Offenes Konzept und Raumgestaltung; pädagogische Konzepte LF1/LF8
+                        <p></p>
+                        Grenzen: Kita imaginiert aus unterschiedlichen Häusern
+                        <p></p>
+                        eingesetze Technologien: lumi-Editor; h5p
+                    </div>
+        	</div>
+
+    <hr>
+
+            <p></p>
+                <a class = "anwendungslinks" href="https://naughty-kepler-f93886.netlify.app/" target="_blank">digitaler Escaperoom zur Erzieherausbildung</a>
+            <p></p>
+            Ein digitaler Escaperoom, der über die Lernfelder der Erzieherausbildung informiert und außerdem nötige Kompetenzen des Berufs aufzeigt
+            <p></p>
+            <div id="akkordeon9">
+                <a class="show" href="#akkordeon9">didaktischer Einsatz, Grenzen, Technologie</a><a class="hide" href="#">Weniger Infos</a>
+                    <div class="inhalt">
+                        didaktische Einsatz: Öffentlichkeitsarbeit, Beginn der Ausbildung, Lernfeld 1 - Thema: Kompetenzen
+                        <p></p>
+                        Grenzen: bewirbt DRK Bildungswerk Dresden
+                        <p></p>
+                        eingesetze Technologien: twine-Editor; Programmiersprachen: Harlowe 3.3.4, CSS
+                    </div>
+            </div>
+
+            <hr>
+
+            <p></p>
+                <a class = "anwendungslinks" href="https://epic-mayer-1655de.netlify.app/" target="_blank">Zufallsgenerator Fallsituationen</a>
+            <p></p>
+            Ein Zufallsgenerator, um zufällige Fallsituationen erstellen zu lassen
+            <p></p>
+            <div id="akkordeon8">
+                <a class="show" href="#akkordeon8">didaktischer Einsatz, Grenzen, Technologie</a><a class="hide" href="#">Weniger Infos</a>
+                    <div class="inhalt">
+                        didaktische Einsatz: Übung vom Umgang mit Fallsituationen; Lernfeld 4  - Angebotsplanung
+                        <p></p>
+                        Grenzen: nur Beginn einer Lernsituation, keine Aufgabenstellung, keine Einflussmöglichkeiten
+                        <p></p>
+                        eingesetze Technologien: twine-Editor; Programmiersprachen: Harlowe 3.3.4, CSS
+                    </div>
+            </div>
+
+            <hr>
+            
+            <p></p>
+                <a class = "anwendungslinks" href="https://blissful-mirzakhani-a13e07.netlify.app/" target="_blank">Luna und die kranke Mutter</a>
+            <p></p>            
+            Ein verzweigte Lernsituation mit Entscheidungsfragen und Bearbeitungsaufgaben zum Thema Wohlbefinden und Exploration
+            <p></p>
+            <div id="akkordeon7">
+                <a class="show" href="#akkordeon7">didaktischer Einsatz, Grenzen, Technologie</a><a class="hide" href="#">Weniger Infos</a>
+                    <div class="inhalt">
+                        didaktische Einsatz: Vertiefung und Übung zum Themenkomplex Bindung, Wohlbefinden und Kohärenz - Lernfeld 4
+                        <p></p>
+                        Grenzen: anschließender Austausch und Diskussion nötig; wenige Informationen über Luna
+                        <p></p>
+                        eingesetze Technologien: Lumi-Editor, html
+                    </div>
+            </div>
+            
+            <hr>
+        
+            <p></p>
+                <a class = "anwendungslinks" href="https://flamboyant-lovelace-6b6b42.netlify.app/" target="_blank">Experiment zum Zusammenhang von Bindung, Wohlbefinden, Kohärenz und Selbstwirksamkeit </a>
+            <p></p>
+            4 kurze Experimente zum Zusammenhang dieser Begiffe    
+            <p></p>
+            <div id="akkordeon6">
+                <a class="show" href="#akkordeon6">didaktischer Einsatz, Grenzen, Technologie</a><a class="hide" href="#">Weniger Infos</a>
+                    <div class="inhalt">
+                        didaktische Einsatz: Erarbeitung zum Themenkomplex Bindung, Wohlbefinden und Kohärenz - Lernfeld 2/4
+                        <p></p>
+                        Grenzen: teilweise unrealistisch
+                        <p></p>
+                        eingesetze Technologien: twine-Editor; loopy-Generator von N. Case; Programmiersprachen: Harlowe 3.3.4
+                    </div>
+            </div>
+
+            <hr>
+
+            <p></p>
+                <a class = "anwendungslinks" href="https://idyllic-muffin-290f16.netlify.app" target="_blank">Offenes Konzept</a>
+            <p></p>
+            Virtuelles Klassenzimmer zum Thema Offenes Konzept   
+            <p></p>
+            <div id="akkordeon5">
+                <a class="show" href="#akkordeon5">didaktischer Einsatz, Grenzen, Technologie</a><a class="hide" href="#">Weniger Infos</a>
+                    <div class="inhalt">
+                        didaktische Einsatz: komplette Unterrichtsstruktur für einen Schultag; Themenkomplex: pädagogische Konzepte - LF1/LF8
+                        <p></p>
+                        Grenzen: -
+                        <p></p>
+                        eingesetze Technologien: twine-Editor; scratch; crytpad.fr; Programmiersprachen: Harlowe 3.3.4; scratch  
+                    </div>
+            </div>
+
+            <hr>
+
+
+            <p></p>
+                <a class = "anwendungslinks" href="https://lucky-cuchufli-a9d446.netlify.app/" target="_blank">Kai am Mittagstisch</a>
+            <p></p>
+            verzweigte Lernsituation zum Thema Beobachtung
+            <p></p>
+            <div id="akkordeon4">
+                <a class="show" href="#akkordeon4">didaktischer Einsatz, Grenzen, Technologie</a><a class="hide" href="#">Weniger Infos</a>
+                    <div class="inhalt">
+                        didaktische Einsatz: Vertiefung zum Themenkomplex Beobachtung LF2/LF4
+                        <p></p>
+                        Grenzen: nur ein Foto, ansonsten nur Beschreibungen des Verhaltens
+                        <p></p>
+                        eingesetze Technologien: twine-Editor; Programmiersprachen: Harlowe 3.3.4
+                    </div>
+            </div>
+
+            <hr>
+
+            <p></p>
+                <a class = "anwendungslinks" href="https://glowing-palmier-f20419.netlify.app/" target="_blank">Fallsituationseditor</a>
+            <p></p>
+            ein Editor um Klientenbeschreibungen, Einrichtungsbeschreibungen, Gruppenbeschreibungen und Aufgaben schnell zu erstellen 
+            <p></p>
+            <div id="akkordeon3">
+                <a class="show" href="#akkordeon3">didaktischer Einsatz, Grenzen, Technologie</a><a class="hide" href="#">Weniger Infos</a>
+                    <div class="inhalt">
+                        didaktische Einsatz: Erstellung von Fallsituationen - alle Lernfelder
+                        <p></p>
+                        Grenzen: teilweise zu detailiert, entwicklungspsychologischer Bereich noch nicht entwickelt
+                        <p></p>
+                        eingesetze Technologien: twine-Editor; Programmiersprachen: Harlowe 3.3.4, CSS
+                    </div>
+            </div>
+
+            <hr>
+
+            <p></p>
+                <a class = "anwendungslinks" href="https://rad-twilight-9dd74b.netlify.app/" target="_blank">Beratungssimulator</a>
+            <p></p>
+            Simulator, um ein Beratungsgespräch mit einer besorgten Mutter nachzustellen; der Spielende spielt die beratende Person 
+            <p></p>
+            <div id="akkordeon2">
+                <a class="show" href="#akkordeon2">didaktischer Einsatz, Grenzen, Technologie</a><a class="hide" href="#">Weniger Infos</a>
+                    <div class="inhalt">
+                        didaktische Einsatz: Beratungsgespräche; Erziehungspartnerschaft - LF7
+                        <p></p>
+                        Grenzen: ersetzt kein echtes Rollenspiel
+                        <p></p>
+                        eingesetze Technologien: renpy-Engine; Programmiersprachen: python
+                    </div>
+            </div>
+
+            <hr>
+
+            <p></p>
+                <a class = "anwendungslinks" href="https://gorgeous-queijadas-69dcd6.netlify.app/" target="_blank">Fröbels Kindergarten</a>
+            <p></p>
+            8-Bit Adventure über Friedrich Fröbels Leben, Ideen und den ersten weltweiten Kindergarten 
+            <p></p>
+            <div id="akkordeon">
+                <a class="show" href="#akkordeon">didaktischer Einsatz, Grenzen, Technologie</a><a class="hide" href="#">Weniger Infos</a>
+                    <div class="inhalt">
+                    <p></p>
+                        didaktische Einsatz: Einstieg Geschichte der Pädagogik; pädagogische Konzepte - LF1/LF8
+                    <p></p>
+                        Grenzen: keine Soeicherung, sehr simple Grafik, viel Text
+                    <p></p>
+                        eingesetze Technologien: bitsy-Editor
+                    </div>
+            </div>
+    </div>
+
+
+    <div class = "footer">© Stefan Klein 2023</div>
+    
+  
+    
+
+</body>
+</html>
